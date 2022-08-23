@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 
-print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
+while (True):
+    print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
+    break
