@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
 
-    argv = sys.argv 
+    argv = sys.argv
     length = len(argv)
 
     if length == 4:
