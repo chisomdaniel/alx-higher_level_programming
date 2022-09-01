@@ -2,9 +2,6 @@
 
 def search_replace(my_list, search, replace):
 
-    if my_list is None or my_list == []:
-        return
-
     length = len(my_list)
 
     if search >= length:
