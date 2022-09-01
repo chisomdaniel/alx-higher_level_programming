@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     if type(roman_string) != str:
         return 0
 
-    if not roman_string or roman_string is None:
+    if roman_string is None:
         return 0
 
     if roman_string == 'IX':
@@ -25,5 +25,3 @@ def roman_to_int(roman_string):
                 break
 
     return sum(new_list)
-
-print(roman_to_int(89))
