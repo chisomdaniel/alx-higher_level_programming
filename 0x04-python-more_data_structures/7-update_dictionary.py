@@ -2,7 +2,7 @@
 
 def update_dictionary(a_dictionary, key, value):
 
-    if not a_dictionary:
+    if a_dictionary is None:
         return
 
     a_dictionary[key] = value
