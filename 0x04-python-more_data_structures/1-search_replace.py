@@ -2,7 +2,7 @@
 
 def search_replace(my_list, search, replace):
 
-    if not my_list:
+    if my_list is None or my_list == []:
         return
 
     length = len(my_list)
