@@ -9,8 +9,11 @@ def roman_to_int(roman_string):
 
     new_list = []
 
+    if type(roman_string) != str:
+        return
+
     if not roman_string or roman_string is None:
-        return None
+        return
 
     if roman_string == 'IX':
         return 9
