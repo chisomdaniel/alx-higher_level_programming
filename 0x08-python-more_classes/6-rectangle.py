@@ -6,6 +6,7 @@ class Rectangle:
     """A class that creates a rectangle"""
 
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -64,7 +65,7 @@ class Rectangle:
         return char
 
     def __repr__(self):
-        """returns a string representation of the rectangle 
+        """returns a string representation of the rectangle
         to be able to recreate a new instance by using eval()
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
