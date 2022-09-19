@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Diving deeper into the usage of python classes"""
 
+
 class Rectangle:
     """A class that creates a rectangle"""
     def __init__(self, width=0, height=0):

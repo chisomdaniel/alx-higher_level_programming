@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Diving deeper into the usage of python classes"""
 
+
 class Rectangle:
     """A class that creates a rectangle"""
     def __init__(self, width=0, height=0):
@@ -39,12 +40,12 @@ class Rectangle:
         """returns the area of the rectangle"""
         return self.width * self.height
 
-   def perimeter(self):
-       """returns the area of the perimeter
+    def perimeter(self):
+        """returns the area of the perimeter
 
-       if ``width`` of ``height`` is equal to 0,
-       perimeter is equal to 0
-       """
-       if self.__width == 0 or self.__height == 0:
-           return 0
-       return 2*(self__width + self__height)
+        if ``width`` of ``height`` is equal to 0,
+        perimeter is equal to 0
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2*(self__width + self__height)
