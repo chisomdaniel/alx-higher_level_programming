@@ -1,0 +1,24 @@
+"""
+==============================
+Using the text_indentation function
+==============================
+
+This is a test file for the ``text_indentation`` function
+this function takes one integer passed as an argument to it
+and returns the sum
+
+Importing the module:
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+=============
+Testing other types of value that isn't `str`
+::
+
+>>> text_indentation(23)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+==============
+
+"""
