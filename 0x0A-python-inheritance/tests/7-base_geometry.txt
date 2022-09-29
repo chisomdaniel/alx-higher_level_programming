@@ -1,0 +1,41 @@
+"""
+==============================
+Test cases for the integer validation method
+==============================
+
+This is a test file for the ``integer_validator`` method
+inside the BaseGeometry class. this function takes two aguments
+and raise an error based on whether or not the value passed is
+an integer or is greater than 0
+
+Importing the module:
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+====
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+>>> try:
+... 	bg.integer_validator("name", "John")
+... except Exception as e:
+... 	print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+>>> try:
+... 	bg.integer_validator("age", 0)
+... except Exception as e:
+... 	print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+>>> try:
+... 	bg.integer_validator("distance", -4)
+... except Exception as e:
+... 	print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+"""
