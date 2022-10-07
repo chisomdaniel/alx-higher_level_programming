@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-from models.base import Base
 """A rectangle class
 
 This module creates a class named rectagle
 that performs various function
 
 """
+from models.base import Base
 
 
 class Rectangle(Base):
