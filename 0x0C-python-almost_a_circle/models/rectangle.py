@@ -105,6 +105,7 @@ class Rectangle(Base):
                          self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """Updates the attributes of the class"""
         if len(args) == 0:
             if "id" in kwargs:
                 self.id = kwargs["id"]
