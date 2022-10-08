@@ -58,3 +58,11 @@ class Square(Rectangle):
             self.y = args[3]
         except Exception:
             return
+
+    def to_dictionary(self):
+        """Creates a dictionary of all the attributes"""
+        new_dict = {}
+        new_dict["id"] = self.id
+        new_dict["size"] = self.size
+        new_dict["x"] = self.x
+        new_dict["y"] = self.y

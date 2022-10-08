@@ -130,3 +130,14 @@ class Rectangle(Base):
             self.y = args[4]
         except Exception:
             return
+
+    def to_dictionary(self):
+        """Creates a dictionary of all the attributes"""
+        new_dict = {}
+        new_dict["id"] = self.id
+        new_dict["width"] = self.width
+        new_dict["height"] = self.height
+        new_dict["x"] = self.x
+        new_dict["y"] = self.y
+
+        return new_dict
