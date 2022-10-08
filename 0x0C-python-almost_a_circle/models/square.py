@@ -23,6 +23,7 @@ class Square(Rectangle):
         string = "[Square] ({}) {}/{} - {}"
         return string.format(self.id, self.x, self.y,
                              self.width)
+
     @property
     def size(self):
         """getter method for the size"""
@@ -37,3 +38,23 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = num
         self.__height = num
+
+    def update(self, *args, **kwargs):
+        """Updates the attributes of the class"""
+        if len(args) == 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+            return
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except Exception:
+            return
