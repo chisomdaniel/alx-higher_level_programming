@@ -9,11 +9,11 @@ class Testbaseclass(unittest.TestCase):
     def test_id(self):
         """testing the inheritance"""
         
-        r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        r1 = Rectangle(10, 2, 0, 0, 5)
+        self.assertEqual(r1.id, 5)
 
-        r1 = Rectangle(2, 10)
-        self.assertEqual(r1.id, 2)
+        r1 = Rectangle(2, 10, 0, 0, 6)
+        self.assertEqual(r1.id, 6)
 
         r2 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(r2.id, 12)
