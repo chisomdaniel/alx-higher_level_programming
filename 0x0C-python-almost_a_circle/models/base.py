@@ -47,3 +47,15 @@ class Base():
         j_string = cls.to_json_string(list_dict)
         with open(filename, 'w') as fd:
             fd.write(j_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+
+        with open("jsonfile.txt", 'w') as f:
+            f.write(json_string)
+        with open("jsonfile.txt", 'r') as f:
+            my_dict = json.load(f)
+
+        return my_dict
