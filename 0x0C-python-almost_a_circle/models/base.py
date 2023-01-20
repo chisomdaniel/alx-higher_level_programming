@@ -2,6 +2,8 @@
 """A python module that initialize a base class
 """
 import json
+#from models.rectangle import Rectangle
+#from models.square import Square
 
 
 class Base():
@@ -59,3 +61,16 @@ class Base():
             my_dict = json.load(f)
 
         return my_dict
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns an instance of a class with all attribute already set'''
+        class_name = cls.__name__
+        if class_name == 'Rectangle':
+            inst = cls(1, 2, id=1)
+        elif class_name == 'Square':
+            inst = cls(1, id=1)
+
+        inst.update(**dictionary)
+
+        return inst
