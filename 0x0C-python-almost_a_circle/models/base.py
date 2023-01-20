@@ -118,5 +118,3 @@ class Base():
             return obj_list
         except FileNotFoundError:
             return []
-
-
