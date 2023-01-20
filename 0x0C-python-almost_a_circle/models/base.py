@@ -2,6 +2,7 @@
 """A python module that initialize a base class
 """
 import json
+import csv
 
 
 class Base():
@@ -84,3 +85,38 @@ class Base():
             return class_list
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        if list_objs is None or len(list_objs) == 0:
+            return
+
+        filename = cls.__name__ + '.csv'
+
+        with open(filename, 'w', newline='') as csvfile:
+            fieldnames = list_objs[0].to_dictionary().keys()
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+            writer.writeheader()
+            for obj in list_objs:
+                writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + '.csv'
+
+        try:
+            with open(filename, newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
+                obj_list = []
+                for row in reader:
+                    for i, j in row.items():
+                        row[i] = int(j)
+                    print(row)
+                    obj_list.append(cls.create(**row))
+
+            return obj_list
+        except FileNotFoundError:
+            return []
+
+
