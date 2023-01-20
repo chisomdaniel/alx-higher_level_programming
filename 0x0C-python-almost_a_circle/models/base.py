@@ -2,8 +2,6 @@
 """A python module that initialize a base class
 """
 import json
-#from models.rectangle import Rectangle
-#from models.square import Square
 
 
 class Base():
