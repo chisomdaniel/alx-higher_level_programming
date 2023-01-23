@@ -112,7 +112,6 @@ class Base():
                 for row in reader:
                     for i, j in row.items():
                         row[i] = int(j)
-                    print(row)
                     obj_list.append(cls.create(**row))
 
             return obj_list
