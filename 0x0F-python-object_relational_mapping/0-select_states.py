@@ -3,20 +3,21 @@
 import MySQLdb
 import sys
 
-if __name__ != '__main__':  # just a shortcut
-    exit()
 
-args = sys.argv
+if __name__ == '__main__':
+    '''Dont work on import'''
 
-if (len(args) <= 3):
-    exit()
+    args = sys.argv
 
-db = MySQLdb.connect(host='localhost', user=args[1],
-                     passwd=args[2], db=args[3])
-cur = db.cursor()
+    if (len(args) <= 3):
+        exit()
 
-cur.execute("SELECT * FROM states ORDER BY id")
-rows = cur.fetchall()
+    db = MySQLdb.connect(host='localhost', user=args[1],
+                         passwd=args[2], db=args[3])
+    cur = db.cursor()
 
-for i in rows:
-    print(i)
+    cur.execute("SELECT * FROM states ORDER BY id")
+    rows = cur.fetchall()
+
+    for i in rows:
+        print(i)
