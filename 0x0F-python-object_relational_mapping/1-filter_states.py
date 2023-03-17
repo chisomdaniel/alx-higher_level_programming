@@ -16,8 +16,9 @@ if __name__ == '__main__':
                          passwd=args[2], db=args[3])
     cur = db.cursor()
 
-    cur.execute('SELECT * FROM states WHERE name like "N%" ORDER BY id')
+    cur.execute('SELECT * FROM states ORDER BY id')
     rows = cur.fetchall()
 
     for i in rows:
-        print(i)
+        if (i[1].startswith('N')):
+            print(i)
