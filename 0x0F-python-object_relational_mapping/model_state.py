@@ -9,6 +9,7 @@ from sqlalchemy import Sequence
 
 Base = declarative_base()
 
+
 class State(Base):
     '''A class for our state table'''
 
