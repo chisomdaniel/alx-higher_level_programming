@@ -23,16 +23,16 @@ if (__name__ == "__main__"):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    city_dict = {}
-    id_list = []
+#    city_dict = {}
+#    id_list = []
     for obj in session.query(State).order_by(State.id):
-        for city in obj.cities:
-            city_dict[city.id] = city.name
-            id_list.append(city.id)
-        id_list.sort()
+#        for city in obj.cities:
+#            city_dict[city.id] = city.name
+#            id_list.append(city.id)
+#        id_list.sort()
 
         print("{}: {}".format(obj.id, obj.name))
-        for i in id_list:
-            print("    {}: {}".format(i, city_dict[i]))
+        for i in obj.cities:
+            print("    {}: {}".format(i.id, i.name))
 
-        id_list = []
+#        id_list = []
