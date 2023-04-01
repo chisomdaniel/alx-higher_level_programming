@@ -22,7 +22,7 @@ if __name__ == "__main__":
         string = r.content.decode().split(',')
         string_id = string[0].split(':')[1]
         name = string[1].split(':')[1]
-        name = name.split('\n')[0]
+        name = name.split('\n')[0].split('"')[1]
         print(f"[{string_id}] {name}")
     except Exception:
         print("Not a valid JSON")
