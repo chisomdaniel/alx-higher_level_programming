@@ -15,8 +15,10 @@ request(url, { json: true }, function (error, response, body) {
   }
 
   for (let i = 0; i < body.results.length; i++) {
-    if (body.results[i].characters.includes(character)) {
-      count++;
+    for (let j = 0; j < body.results[i].characters.length; j++) {
+	if (body.results[i].characters[j].includes('18')) {
+          count++;
+	}
     }
   }
 
